@@ -1,0 +1,411 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; }
+    @media only screen and (max-width: 68.75em) {
+      html {
+        font-size: 80%; }
+        .listBox img{
+            width: 9% !important;
+        }
+        .bottomContainer{
+            flex-direction: column
+        }
+    }
+  
+  body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #655A56;
+    background-image: linear-gradient(to right bottom, #FBDB89, #F48982);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px
+}
+
+h4 ,p{
+    padding: 0px;
+    margin: 0px
+}
+.flex{
+    display: flex
+}
+.mainContainer{
+    max-width: 80%;
+    margin: auto;
+    margin-top: 3%;
+}
+
+header{
+    background-color: #F9F5F3;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2%
+}
+header img{
+    width: 13%
+}
+
+.headerInput{
+    background-color: #fff;
+    border-radius: 10rem;
+    margin-left: -10%;
+    display: flex;
+    transition: all .3s;
+}
+
+.headerInput:focus-within{
+    transform: translateY(-2px);
+    box-shadow: 0 0.7rem 3rem rgba(101, 90, 86, 0.08);
+}
+
+.search__input,.search__button{
+    outline: none;
+    border: none;
+}
+.search__input {
+    margin: 0px 20px;
+}
+
+.search__button, .shopping__cart__button{
+    background: none;
+    padding: 10px 20px;
+    background: linear-gradient(to right bottom, #FBDB89, #F48982);
+    border-radius: 8rem;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+    border: none;
+    outline: none
+}
+
+.search__button:hover,.shopping__cart__button:hover{
+    background:#FBDB89
+}
+button:active,.shopping__cart__button:active{
+    transform: translateY(1px);
+}
+
+.headerInput i, .shopping__cart__button i{
+    padding: 0px 5px
+}
+
+.likedCount{
+    background: #e74c3c;
+    border-radius: 50%;
+    color: white;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    position: absolute;
+    top: -13px;
+    left: 20px;
+}
+
+/* bottom container */
+
+.notFound{
+
+}
+
+.bottomContainer{
+    width: 100%;
+    display: flex;
+    min-height: 100vh;
+    height: 100%
+}
+
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    color: #F48982
+    
+}
+.loader i{
+    font-size: 50px;
+    
+}
+.listContainer{
+    background: white;
+    flex:1;
+    padding-bottom: 2%;
+}
+.recipeContainer{
+    background:#F9F5F3;
+    flex:2;
+    border-top: 2px solid white;
+    overflow: hidden;
+    position: relative
+}
+.shopContainer{
+    background: white;
+    flex:1
+}
+
+/* list containe */
+.listBox img{
+    width: 18%;
+    height: 60%;
+    border-radius: 50%;
+}
+.listBox{
+    height: 80px;
+    cursor: pointer;
+    border-bottom: 1px solid #F9F5F3;
+}
+
+.listBox a{
+    height: 100%;
+    width: 100%;
+    margin-left: 10%;
+    align-items: center;
+    text-decoration: none;
+}
+.listText{
+    margin-left: 3%
+}
+.recipeTitle,
+.likes__name ,.notFound{
+  font-size: 1.3rem;
+  color: #F59A83;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.recipeSubTitle,
+.likes__author {
+  font-size: 1.1rem;
+  color: #968B87;
+  text-transform: uppercase;
+  font-weight: 600; }
+
+  .listBox:hover{
+      background: #F9F5F3;
+      transform: translateY(-2px)
+  }
+
+  .pageButton{
+    background: #F9F5F3;
+    outline: navajowhite;
+    padding: 2%;
+    text-transform: uppercase;
+    border-radius: 42%;
+    font-size: 106%;
+    cursor: pointer;
+    color: #F59A83;
+    border: navajowhite;
+  }
+  .prevPage{
+    float: left;
+    margin-left: 5%;
+  }
+  .nextPage{
+    float: right;
+    margin-right: 5%;
+  }
+  .pagination{
+    margin-top: 6%;
+  }
+
+
+  /* .recipeContainer */
+
+  .recipeImg{
+    width: 100%;
+    height: 300px;
+    max-width: 720px;
+  }
+  
+  .recipeContainer img{
+    width: 100%;
+    height: 100%
+
+}
+  .serveContainer{
+    display: flex;
+    padding: 8% 2%;
+    font-size: 178%;
+    color: #F59A83;
+    text-transform: uppercase;
+    justify-content: space-around;
+    background: #e8e6e6;
+    align-items: center;
+    margin-bottom: 5%;
+    width: 100%;
+  }
+
+.serve__clock,.serve__user,.dec_servings,.inc_servings{
+      padding: 0px 5px;
+      cursor: pointer;
+      color: #F59A83;
+  }
+  .like__item{
+    padding: 0px 5px;
+    cursor: pointer;
+    color: white !important
+  }
+
+  .num__serve{
+      padding-right: 5px
+  }
+
+  .ing__ul{
+      display: flex;
+      width: 90%;
+      flex-wrap: wrap;
+      margin: auto;
+      font-size: 130%;
+  }
+  .ing__ul li{
+      width: 50%;
+      display: flex;
+      line-height: 15px;
+      margin-bottom: 4%
+
+  }
+  .ing__ul li i {
+   color: #F59A83
+    
+}
+  .ing__ingredient{
+      max-width: 80%
+  }
+
+  .ing__ul li>span, .ing__ul li div{
+      margin-left: 2%
+  }
+
+  .ingContainer{
+      margin-bottom: 5%
+  }
+
+  .add__recipe__button{
+    margin-bottom: 5%;
+    text-align: center
+  }
+
+  .shopping__cart__button i{
+      color: white
+  }
+
+  .dec_servings:active,.inc_servings:active{
+      transform: translateY(2px)
+  }
+
+  .crossTitle{
+    padding: 10px;
+    position: absolute;
+    width: 80%;
+    transform: rotate(-5deg);
+    top: 200px;
+    left: 11%;
+    background: linear-gradient(to right bottom, #FBDB89, #F48982);
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    max-height: 90px;
+    overflow: hidden;
+  }
+
+  .like__item:hover  .like__item{
+    color:#F59A83 !important
+  }
+
+
+
+  /* shopping list conatiner */
+  .shoplist__header{
+    text-align: center;
+    color: #F59A83;
+  }
+
+  .listItem{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #b2bec3;
+    cursor: pointer
+  }
+  .list__ing__countContainer{
+    height: 20px;
+    border: 1px solid #dfe6e9;
+    padding: 2px 4px;
+  }
+ 
+  .list__ing__count,.list__ing__unit{
+    border: none;
+    font-size: 1.3rem;
+    color: #968B87;
+    font-weight: 600;
+    outline: none
+  }
+  .list__ing__count{
+    width: 43px;
+  }
+  .list__ing__unit{
+    width: 27px;
+  }
+  .list__ing__title{
+    flex: 2;
+    margin-left: 13px;
+    font-size: 1.3rem;
+    color: #968B87;
+    font-weight: 600;
+  }
+  .list__ing__del{
+    font-size: 18px;
+    color: #F59A83;
+    cursor: pointer;
+    visibility: hidden;
+  }
+  /* i:hover{
+      transform: scale(1.3)
+  } */
+
+  .listItem:hover .list__ing__del{
+      visibility: visible
+  }
+  /* .list__ing__del{
+      margin-left: auto
+  } */
+
+
+  /* like Controller */
+.headerLike{
+    cursor: pointer;
+    color: #F59A83
+}
+.likeContainer{
+    position: relative;
+}
+.likedList{
+    position: absolute;
+    visibility: hidden;
+    width: 300px;
+    background: #FBDB89;
+    font-size: 1.6rem;
+    color: white;
+    font-weight: 600;
+    outline: none;
+    right: -130px;
+    z-index: 999;
+}
+.likeContainer:hover .likedList{
+    visibility: visible
+}
+
+.likeColor{
+    color:#F59A83 !important
+}
+
+.like__item:hover{
+    color: #F59A83 !important
+  }
