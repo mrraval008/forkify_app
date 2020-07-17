@@ -45,7 +45,7 @@ export const limitTitle = function(title,limit = 17){
 
 export const removeLoader = function(parent){
         let loader = document.querySelector(`.${elementString.loader}`);
-        if(loader){
+        if(loader && parent.contains(loader)){
             parent.removeChild(loader)
         }
 }
